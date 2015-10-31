@@ -1,14 +1,123 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:drools="http://www.jboss.org/drools" 
-id="Definition" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes"> 
-   <bpmn2:process id="IsplataStambenogKredita.PrijavauHROK" drools:packageName="org.jbpm" drools:version="1.0" name="" isExecutable="true"> 
-      <bpmn2:startEvent id="processStartEvent" drools:bgcolor="#9acd32" drools:selectable="true" name=""/> 
-   </bpmn2:process> 
-   <bpmndi:BPMNDiagram> 
-      <bpmndi:BPMNPlane bpmnElement="IsplataStambenogKredita.PrijavauHROK"> 
-         <bpmndi:BPMNShape bpmnElement="processStartEvent"> 
-            <dc:Bounds height="30.0" width="30.0" x="120.0" y="165.0"/> 
-         </bpmndi:BPMNShape> 
-      </bpmndi:BPMNPlane> 
-   </bpmndi:BPMNDiagram> 
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_AQiWIH-7EeW8-6DDTb1FpA" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Designer" exporterVersion="6.2.0" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
+  <bpmn2:itemDefinition id="_F2EA1ECF-0165-428C-BCF3-26DFC2146C34_InMessageType"/>
+  <bpmn2:message id="_F2EA1ECF-0165-428C-BCF3-26DFC2146C34_InMessage" itemRef="_F2EA1ECF-0165-428C-BCF3-26DFC2146C34_InMessageType"/>
+  <bpmn2:interface id="_F2EA1ECF-0165-428C-BCF3-26DFC2146C34_ServiceInterface" name="_F2EA1ECF-0165-428C-BCF3-26DFC2146C34_ServiceInterface" implementationRef="_F2EA1ECF-0165-428C-BCF3-26DFC2146C34_ServiceInterface">
+    <bpmn2:operation id="_F2EA1ECF-0165-428C-BCF3-26DFC2146C34_ServiceOperation" name="_F2EA1ECF-0165-428C-BCF3-26DFC2146C34_ServiceOperation" implementationRef="_F2EA1ECF-0165-428C-BCF3-26DFC2146C34_ServiceOperation">
+      <bpmn2:inMessageRef>_F2EA1ECF-0165-428C-BCF3-26DFC2146C34_InMessage</bpmn2:inMessageRef>
+    </bpmn2:operation>
+  </bpmn2:interface>
+  <bpmn2:process id="IsplataStambenogKredita.PrijavauHROK" drools:packageName="org.jbpm" drools:version="1.0" name="Prijava u HROK" isExecutable="true">
+    <bpmn2:startEvent id="_CF567C0D-1E6A-4C38-B914-12E93857F815" drools:selectable="true" color:background-color="#9acd32" color:border-color="#000000" color:color="#000000" name="Ugvor sklopljen">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Ugvor sklopljen]]></drools:metaValue>
+        </drools:metaData>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Ugvor sklopljen]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:outgoing>_5E5689F8-5EE0-4B18-94F3-B890B8FFC208</bpmn2:outgoing>
+      <bpmn2:signalEventDefinition id="_AQiWIX-7EeW8-6DDTb1FpA"/>
+    </bpmn2:startEvent>
+    <bpmn2:serviceTask id="_F2EA1ECF-0165-428C-BCF3-26DFC2146C34" drools:selectable="true" drools:serviceimplementation="Java" drools:serviceoperation="_F2EA1ECF-0165-428C-BCF3-26DFC2146C34_ServiceOperation" drools:serviceinterface="_F2EA1ECF-0165-428C-BCF3-26DFC2146C34_ServiceInterface" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Prijava klijenta u HROK" implementation="Java" operationRef="_F2EA1ECF-0165-428C-BCF3-26DFC2146C34_ServiceOperation">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Prijava klijenta u HROK]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_5E5689F8-5EE0-4B18-94F3-B890B8FFC208</bpmn2:incoming>
+      <bpmn2:outgoing>_41E1688A-F754-4B3B-B83A-786A0D55305D</bpmn2:outgoing>
+    </bpmn2:serviceTask>
+    <bpmn2:sequenceFlow id="_5E5689F8-5EE0-4B18-94F3-B890B8FFC208" drools:selectable="true" color:background-color="#000000" color:border-color="#000000" color:color="#000000" sourceRef="_CF567C0D-1E6A-4C38-B914-12E93857F815" targetRef="_F2EA1ECF-0165-428C-BCF3-26DFC2146C34"/>
+    <bpmn2:endEvent id="_BA653741-FFBD-49C0-BD35-99102AAC9B6A" drools:selectable="true" color:background-color="#00CCFF" color:border-color="#000000" color:color="#000000" name="">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[]]></drools:metaValue>
+        </drools:metaData>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_41E1688A-F754-4B3B-B83A-786A0D55305D</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_41E1688A-F754-4B3B-B83A-786A0D55305D" drools:selectable="true" color:background-color="#000000" color:border-color="#000000" color:color="#000000" sourceRef="_F2EA1ECF-0165-428C-BCF3-26DFC2146C34" targetRef="_BA653741-FFBD-49C0-BD35-99102AAC9B6A"/>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="_AQiWIn-7EeW8-6DDTb1FpA">
+    <bpmndi:BPMNPlane id="_AQiWI3-7EeW8-6DDTb1FpA" bpmnElement="IsplataStambenogKredita.PrijavauHROK">
+      <bpmndi:BPMNShape id="_AQiWJH-7EeW8-6DDTb1FpA" bpmnElement="_CF567C0D-1E6A-4C38-B914-12E93857F815">
+        <dc:Bounds height="30.0" width="30.0" x="94.0" y="226.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_AQiWJX-7EeW8-6DDTb1FpA" bpmnElement="_F2EA1ECF-0165-428C-BCF3-26DFC2146C34">
+        <dc:Bounds height="80.0" width="100.0" x="210.0" y="201.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="_AQiWJn-7EeW8-6DDTb1FpA" bpmnElement="_5E5689F8-5EE0-4B18-94F3-B890B8FFC208">
+        <di:waypoint xsi:type="dc:Point" x="109.0" y="241.0"/>
+        <di:waypoint xsi:type="dc:Point" x="260.0" y="241.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_AQiWJ3-7EeW8-6DDTb1FpA" bpmnElement="_BA653741-FFBD-49C0-BD35-99102AAC9B6A">
+        <dc:Bounds height="28.0" width="28.0" x="375.0" y="227.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="_AQiWKH-7EeW8-6DDTb1FpA" bpmnElement="_41E1688A-F754-4B3B-B83A-786A0D55305D">
+        <di:waypoint xsi:type="dc:Point" x="260.0" y="241.0"/>
+        <di:waypoint xsi:type="dc:Point" x="389.0" y="241.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmn2:relationship id="_AQiWKX-7EeW8-6DDTb1FpA" type="BPSimData">
+    <bpmn2:extensionElements>
+      <bpsim:BPSimData>
+        <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
+          <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters" baseTimeUnit="min"/>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_41E1688A-F754-4B3B-B83A-786A0D55305D" id="_AQiWKn-7EeW8-6DDTb1FpA">
+            <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
+              <bpsim:Probability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="100.0"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_5E5689F8-5EE0-4B18-94F3-B890B8FFC208" id="_AQiWK3-7EeW8-6DDTb1FpA">
+            <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
+              <bpsim:Probability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="100.0"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_CF567C0D-1E6A-4C38-B914-12E93857F815" id="_AQiWLH-7EeW8-6DDTb1FpA">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:UniformDistribution max="10.0" min="5.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
+              <bpsim:Probability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="100.0"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_F2EA1ECF-0165-428C-BCF3-26DFC2146C34" id="_AQiWLX-7EeW8-6DDTb1FpA">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:UniformDistribution max="10.0" min="5.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_BA653741-FFBD-49C0-BD35-99102AAC9B6A" id="_AQiWLn-7EeW8-6DDTb1FpA">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:UniformDistribution max="10.0" min="5.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+          </bpsim:ElementParameters>
+        </bpsim:Scenario>
+      </bpsim:BPSimData>
+    </bpmn2:extensionElements>
+    <bpmn2:source>_AQiWIH-7EeW8-6DDTb1FpA</bpmn2:source>
+    <bpmn2:target>_AQiWIH-7EeW8-6DDTb1FpA</bpmn2:target>
+  </bpmn2:relationship>
 </bpmn2:definitions>
